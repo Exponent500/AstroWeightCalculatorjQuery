@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Astro Weight Calculator</title>
+    <!-- Latest compiled and minified Bootstrap CSS from Max CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <!-- Bootstrap container class provides a responsive fixed width container for this div's children -->
+    <div class="container">
+        <span class="h2" id="title">Astro Weight Calculator jQuery</span>
+        <div class="form-container">
+            <!-- wrapping the label and input elements in a div that has a Bootstrap class of form group, gives the label and select elements optimal spacing (per Bootstrap CSS documentation)-->
+            <!-- wrapping the label and input elements in a div that has a Bootstrap class of col-sm-5, makes it so these elements take up 5 of the total 12 available columns in the Bootstrap grid (from "small" up to "large" screen sizes). At screen sizes smaller than "small", it will revert back to a stacked form -->
+            <div class="form-group col-sm-5">
+                <label for="weight">Your Weight</label>
+                <!-- The Bootstrap form-control class allows the input element to take up 100% of the width of the parent -->
+                <input class="form-control" type="text" id="weight" name="user_weight">
+            </div>
+            <div class="form-group col-sm-5">
+                <label for="planet">Select a Planet</label>
+                <select class="form-control" id="planet"></select>
+            </div>
+            <div class="form-group col-sm-2">
+                <!-- The Bootstrap btn class makes the button look a lot nicer -->
+                <!-- The Bootstrap btn-primary class makes the button a blueish color -->
+                <button id ="calculate-button" class="btn btn-primary form-control" type="button">Calculate</button>
+            </div>
+        </div>
+        <div>
+            <div class="col-sm-12">
+                <pre><p id="result"></p></pre>
+            </div>
+        </div>
+    </div>
+    <!-- minified jQuery (necessary for Bootstrap's Javascript plugins (from Google's CDN))-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Includes all compiled Bootstrap minified Javascript plugins (from Max CDN) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--My custom Javascript-->
+    <script src="index.js"></script>
+</body>
+
+</html>
