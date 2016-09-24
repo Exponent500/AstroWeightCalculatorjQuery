@@ -27,4 +27,17 @@ $(document).ready(function(){
   $.each(planets, function(i) {
       $("<option>").val(planets[i][1]).html(planets[i][0]).prependTo("#planet"); 
   });
+
+  //Sorts planets array in ascending order of gravity
+  planets.sort(function(a,b){
+      return a[1] - b[1]; 
+  });
+
+  //Dynamically creates the planet-table HTML structure and populates the rows within the table with the data within the planets array of arrays
+  $.each(planets, function(i) {
+      if (i === 0){
+        $("#planets-table").append("<thead><tr><th>Planet Name</th><th>Multiple of Earth Gravity</th></tr></thead><tbody></tbody>").addClass("table table-striped table-bordered");
+      }       
+      $("#planets-table tbody").append("<tr><td>" + planets[i][0] + "</td><td>" + planets[i][1] + "</td></tr>");
+  })
 });
